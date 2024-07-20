@@ -1,24 +1,19 @@
 <script>
-import Header from './components/Header.vue'
-import { initFlowbite } from 'flowbite'
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
+
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
 } else {
-    document.documentElement.classList.remove('dark')
+  document.documentElement.classList.remove('dark')
 }
+
+import Header from './components/Header.vue';
 export default {
-  mounted() {
-    initFlowbite();
-  },
-  data(){
-    return {}
-  },
   components: { Header }
 }
 </script>
 
 <template>
-  <Header />
+  <Header/>
   <RouterView />
 </template>
 

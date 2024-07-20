@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{vue,js,ts,jsx,tsx}', './index.html', "./node_modules/flowbite/**/*.js"],
+  content: ['./src/**/*.{vue,js,ts,jsx,tsx}', './index.html'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
@@ -7,5 +7,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
 }
